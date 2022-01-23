@@ -49,6 +49,8 @@ fsutil file createnew "%SD_CARD_MOUNT_DRIVE_LETTER:\=\\%:\\DON'T PUT THIS BUILD 
 
 call unmount.bat || goto error
 
+powershell.exe .\CleanNetplayFiles.ps1
+
 goto :eof
 
 :error

@@ -48,5 +48,5 @@ $rsbe01Path = "..\Build\Project+\RSBE01.txt"
 $strapcode = Select-String -Path $rsbe01Path -Pattern "046CADE8"
 if ($strapcode -eq $null)
 {
-	(Get-Content $rsbe01Path).replace('80078E14', "80078E14`r`n`r`n#############################################`r`n[Project+] Skip strap screen [PyotrLuzhin]`r`n#############################################`r`n* 046CADE8 48000298") | Set-Content $rsbe01Path
+	(Get-Content $rsbe01Path).replace('80078E14', "80078E14`r`n* 046CADE8 48000298") | Set-Content $rsbe01Path
 }
